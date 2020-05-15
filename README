@@ -1,0 +1,19 @@
+Three NWchem output files are read in neutral.nwo, charge1.nwo, and
+straight.nwo. Python file reads in the first two output files for the
+neutral ground state and charge (+1) calculations and processces the
+data. An error is calculated as J = |SCF-neutral - SCF-charge1 + IP|
+
+
+Plots the error funtion that allows us to visualize the minimum
+functional parameters. Calculation using the parameters that give
+this minimum is done to test straight line behavior. Using
+straight.nwo file, total DFT energy vs # of electrons are plotted to see
+how straight the line.
+
+The first plot for the error is done using GNUplot script (tmp.gp) and
+the second test plot using python file. R^2 for the straight line is also
+determined.
+
+To run:  python3.5 func.py
+
+Press ENTER after closing first plot to generate second plot. 
